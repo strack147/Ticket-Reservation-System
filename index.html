@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <!-- import MD icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- import Materialize css -->
+    <link href="css/materialize.min.css" rel="stylesheet">
+    <!-- import custom css -->
+    <link href="css/style.css" rel="stylesheet">
+    <title>e-AirTickets</title>
+</head>
+
+<body>
+    <!-- Place your HTML content here -->
+    <!-- START OF HEADER -->
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center"></a>
+            </div>
+        </nav>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- START OF PAGE -->
+    <main>
+
+        <!-- START OF FORMS -->
+
+        <!-- START OF SEARCH FORM -->
+        <div class="search-card" id="searchForm">
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">flight_takeoff</i>
+                            <select id="arrival">
+                                <option value=""></option>
+                                <option value="ATH">ATHENS (ATH)</option>
+                                <option value="HER">HERAKLION (HER)</option>
+                                <option value="LCA">LARNACA (LCA)</option>
+                                <option value="PAR">PARIS (PAR)</option>
+                                <option value="SKG">THESSALONIKI (SKG)</option>
+                            </select>
+                            <label for="icon_flight_takeoff">Arrival</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">flight_land</i>
+                            <select id="destination">
+                                <option value=""></option>
+                                <option value="ATH">ATHENS (ATH)</option>
+                                <option value="HER">HERAKLION (HER)</option>
+                                <option value="LCA">LARNACA (LCA)</option>
+                                <option value="PAR">PARIS (PAR)</option>
+                                <option value="SKG">THESSALONIKI (SKG)</option>
+                            </select>
+                            <label for="icon_flight_land">Destination</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">event</i>
+                            <input id="flight_date" class="datepicker" type="text">
+                            <label for="icon_event">Date</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">flight</i>
+                            <select id="company">
+                                <option value=""></option>
+                                <option value="Aegean Airlines">Aegean Airlines</option>
+                                <option value="Cobalt Airlines">Cobalt Airlines</option>
+                                <option value="Olympic Airlines">Olympic Airlines</option>
+                            </select>
+                            <label for="icon_flight">Company</label>
+                        </div>
+                    </div>
+
+                    <center>
+                        <a class="btn waves-effect waves-light blue modal-trigger" id="search_button">Search
+                            <i class="material-icons right">search</i>
+                        </a>
+                    </center>
+                </form>
+            </div>
+        </div>
+        <!-- END OF SEARCH FORM -->
+
+        <!-- START OF RESERVATION FORM -->
+        <div class="modal modal-fixed-footer" id="reservationForm">
+            <div class="modal-content">
+                <h4>Resarvation Form</h4>
+                <p></p>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="birthday" class="datepicker" type="text">
+                                <label for="birthday">Birthday</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="passport_no" type="text" class="validate">
+                                <label for="passport_no">Passport No.</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="seat_number" type="number" min="1" max="10">
+                                <label for="seat_number">Number of Seats</label>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-action modal-close waves-effect waves-red btn-flat" href="#!">CANCEL</a>
+                <a class="modal-action modal-close waves-effect waves-green btn-flat" id="reserv_button" onclick="functionAddDis()">Submit</a>
+            </div>
+        </div>
+        <!-- END OF RESERVATION FORM -->
+
+        <!-- START OF VISA FORM -->
+        <div class="modal modal-fixed-footer" id="visaForm">
+            <div class="modal-content">
+                <h4>Visa Form</h4>
+                <p></p>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first_name2" type="text" placeholder="Placeholder">
+                                <label for="first_name2">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name2" type="text" placeholder="Placeholder">
+                                <label for="last_name2">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="passport_no2" type="text" placeholder="Placeholder">
+                                <label for="passport_no2">Passport No.</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="visa_code" type="text" class="validate">
+                                <label for="visa_code">Visa Number</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-action modal-close waves-effect waves-red btn-flat" href="#!">CANCEL</a>
+                <a class="modal-action modal-close waves-effect waves-green btn-flat" id="visa_button">Complete</a>
+            </div>
+        </div>
+        <!-- END OF VISA FORM -->
+
+        <!-- END OF FORMS -->
+
+        <!-- START OF CARDS -->
+        <div class="row" id="cardsection">
+
+        </div>
+        <!-- END OF CARDS -->
+
+    </main>
+    <!-- END OF PAGE -->
+
+    <!-- START OF FOOTER -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Follow us on!</h5>
+                    <p>
+                        <a href="https://facebook.com"><img src="https://image.flaticon.com/icons/svg/124/124010.svg" alt="Facebook" style="width:32px;height:32px;"></a>
+                        <a href="https://www.instagram.com"><img src="https://image.flaticon.com/icons/svg/124/124032.svg" alt="Instagram" style="width:32px;height:32px;"></a>
+                        <a href="https://twitter.com/"><img src="https://image.flaticon.com/icons/svg/124/124021.svg" alt="Twitter" style="width:32px;height:32px;"></a>
+                        <a href="https://youtube.com"><img src="https://image.flaticon.com/icons/svg/124/124015.svg" alt="Youtube" style="width:32px;height:32px;"></a>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 NIKOS PAPATHEODOROU TP4248 // STATHIS KRITIKOS TP4158
+            </div>
+        </div>
+    </footer>
+
+    <!-- ##################################################################################################### -->
+    <!-- ## Leave these scripts as the last part of body tag. Do NOT place any HTML content below this line ## -->
+    <!-- ##################################################################################################### -->
+    <!-- import jQuery -->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <!-- import Materialize js script -->
+    <script src="js/materialize.min.js" type="text/javascript"></script>
+    <!-- import trello and custom js script-->
+    <script src="https://trello.com/1/client.js?key=6f81bc741f96e615eedde963fa581ddb&token=1b5c697c6181d70621ad01c68ae7b62f6126fc90191a97711d7197086ac40516"></script>
+    <script src="js/script.js" type="text/javascript">
+    </script>
+</body>
+
+</html>
