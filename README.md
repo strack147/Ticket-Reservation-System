@@ -1,3 +1,5 @@
+NOTE: THIS PROJECT IS IMPLEMENTED WITH THE HELP OF THE TRELLO API
+
 The Internet (web-based) "e-AirTickets" information system, which enables the company's customers to book flights to a particular city in the country or a foreign country. Of the various functions to be supported, the current semester project focuses on "Submit and electronic reservation control process." However, before describing the process must be aware of the following:
 
 •	Ticket application features can only adults have a passport and have received permission (visa) to travel to that country. A customer has the possibility to close several locations in one flight. For convenience of work we believe that the import process and authentication is not repeated for each additional person included in the reservation request.
