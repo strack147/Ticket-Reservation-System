@@ -1,4 +1,6 @@
-NOTE: THIS PROJECT IS IMPLEMENTED WITH THE HELP OF THE TRELLO API
+                          ===========================================================================
+                          ==== NOTE: THIS PROJECT IS IMPLEMENTED WITH THE HELP OF THE TRELLO API ====
+                          ===========================================================================
 
 The Internet (web-based) "e-AirTickets" information system, which enables the company's customers to book flights to a particular city in the country or a foreign country. Of the various functions to be supported, the current semester project focuses on "Submit and electronic reservation control process." However, before describing the process must be aware of the following:
 
